@@ -4,7 +4,7 @@ import EditMainsForm from "@/components/EditMainsForm";
 const getMainsById = async (id) => {
     try {
         const res = await fetch(`http://localhost:3000/api/mains/${id}`, {
-         cache: 'no-cache'
+          cache: "no-cache",
         });
  
         if (!res.ok) {
