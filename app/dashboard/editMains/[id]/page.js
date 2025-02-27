@@ -27,12 +27,12 @@ export default async function EditMains({ params }) {
         return <div>Mains not found</div>;
     }
 
-    const { comment, imagex, newFiles } = data.mains;
+    const { comment, imagex } = data.mains;
 
     return (
         <div className="flex flex-col justify-center items-center">
 
-            <EditMainsForm id={id} comment={comment} imagex={imagex} newFiles={newFiles} />
+            <EditMainsForm id={id} comment={comment} imagex={imagex}  />
         </div>
 
         
