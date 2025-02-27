@@ -12,7 +12,7 @@ import { NextResponse } from "next/server";
 }  
 export async function PUT(request, { params }) {
     const { id } = params;
-    const { newComment: comment, newImagex: imagex, newFilesx: filesx } = await request.json();
+    const { newComment: comment, newImagex: imagex } = await request.json();
     await dbConnect();
     await Main.findByIdAndUpdate(id, { comment, imagex, filesx});
     return NextResponse.json({ message: "Mains updated" }, { status: 200 });
